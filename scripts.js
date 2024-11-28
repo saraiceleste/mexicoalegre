@@ -40,8 +40,13 @@ const firebaseConfig = {
 
 // Inicializar Firebase
 const app = initializeApp(firebaseConfig);
+console.log("Firebase inicializado:", app);
+
 const analytics = getAnalytics(app);
-const db = getFirestore(app); // Base de datos Firestore
+console.log("Analytics inicializado:", analytics);
+
+const db = getFirestore(app);
+console.log("Firestore inicializado:", db);
 
 // Manejo del formulario
 const form = document.getElementById("contact-form");
@@ -57,8 +62,8 @@ form.addEventListener("submit", async (e) => {
   const message = document.getElementById("message").value;
 
   try {
-    // Guardar en Firestore
-    await addDoc(collection(db, "contactos"), { 
+    console.log("Intentando guardar en Firestore...");
+    await addDoc(collection(db, "contactos"), {
       name,
       email,
       phone,
@@ -67,6 +72,7 @@ form.addEventListener("submit", async (e) => {
     });
 
     result.textContent = "Formulario enviado con éxito.";
+    console.log("Datos guardados correctamente.");
     form.reset(); // Limpiar formulario
   } catch (error) {
     result.textContent = "Error al enviar el formulario. Inténtalo de nuevo.";

@@ -48,7 +48,7 @@ form.addEventListener("submit", async (e) => {
 
   try {
     // Guardar en Firestore
-    await addDoc(collection(db, "contactos"), {
+    await addDoc(collection(db, "dpWTEbbyJm2pegnpw0co"), {
       name,
       email,
       phone,

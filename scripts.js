@@ -27,15 +27,27 @@ import { getFirestore, addDoc, collection } from "https://www.gstatic.com/fireba
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js";
 
-// Configuración de Firebase
-const firebaseConfig = {
-  apiKey: "AIzaSyB8eBcTHGHE6y977rBnypXYzEM-HUQZLyY",
-  authDomain: "paginamariachi-2326c.firebaseapp.com",
-  projectId: "paginamariachi-2326c",
-  storageBucket: "paginamariachi-2326c.firebasestorage.app",
-  messagingSenderId: "243443928369",
-  appId: "1:243443928369:web:aeff2f9da6b8e6e2da3410",
-  measurementId: "G-D4YVFCBK99"
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBaV_eUkE_ciVDeU9fpdLviTD8tJVJ6KMY",
+    authDomain: "paginamariachi-2e9da.firebaseapp.com",
+    projectId: "paginamariachi-2e9da",
+    storageBucket: "paginamariachi-2e9da.firebasestorage.app",
+    messagingSenderId: "920194758561",
+    appId: "1:920194758561:web:4f7631889578f85c97bde0",
+    measurementId: "G-WFCJXG8ZM9"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
 };
 
 // Inicializar Firebase
